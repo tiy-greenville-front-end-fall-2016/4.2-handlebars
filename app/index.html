@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 2 handlebars</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <h1 class="well">Handlebars Demo</h1>
+
+    <div class="container">
+      <div id="album-container" class="row">
+        <!-- <div class="col-md-6">
+          <h2>First Column</h2>
+          <img src="http://unsplash.it/200/200" alt="" />
+        </div>
+        <div class="col-md-6">Second Column</div> -->
+      </div>
+    </div>
+
+
+    <script id="photo-album" type="text/x-handlebars-template">
+      <div class="col-md-6">
+        <h2>{{title}} #{{albumNumber}}</h2>
+        <img src="{{image}}" alt="" />
+
+        <h3>Included Photos</h3>
+        <ul>
+          {{#each photos}}
+            <li><a href="#">{{photoTitle}}</a></li>
+          {{/each}}
+        </ul>
+
+      </div>
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
